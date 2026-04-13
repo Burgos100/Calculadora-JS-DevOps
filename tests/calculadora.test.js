@@ -3,7 +3,7 @@ const calcularPromedio = require('../calculadora');
 
 test('Calcula correctamente el promedio ponderado con notas perfectas', () => {
     // Si un alumno tiene 7.0 en todo, su promedio debe ser 7.0
-    expect(calculateAverage(7.0, 7.0, 7.0, 7.0)).toBe(7.0);
+    expect(calcularPromedio(7.0, 7.0, 7.0, 7.0)).toBe(7.0);
 });
 
 test('Calcula correctamente un escenario con notas variadas', () => {
