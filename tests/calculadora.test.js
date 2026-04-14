@@ -1,7 +1,7 @@
 const calcularPromedio = require('../calculadora');
 
 test('Calcula correctamente el promedio ponderado con notas perfectas', () => {
-    expect(calcularPromedio(7.0, 7.0, 7.0, 7.0)).toBe(6.0);
+    expect(calcularPromedio(7.0, 7.0, 7.0, 7.0)).toBe(7.0);
 });
 
 test('Calcula correctamente un escenario con notas variadas', () => {
