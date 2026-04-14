@@ -1,12 +1,9 @@
-// app.js
 const express = require('express');
 const calcularPromedio = require('./calculadora');
 
 const app = express();
-// Permite leer los datos enviados por el formulario HTML
 app.use(express.urlencoded({ extended: true }));
 
-// Mostrar el formulario cuando el usuario entra a la web
 app.get('/', (req, res) => {
     res.send(`
         <h2>Calculadora de Promedios Universitarios</h2>
@@ -20,7 +17,6 @@ app.get('/', (req, res) => {
     `);
 });
 
-// Procesar las notas cuando se envía el formulario
 app.post('/calcular', (req, res) => {
     try {
         const { n1, n2, n3, n4 } = req.body;
@@ -31,7 +27,6 @@ app.post('/calcular', (req, res) => {
     }
 });
 
-// Iniciar el servidor
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
